@@ -4,7 +4,7 @@
 
 Плагин ожидает следующую HTML-разметку и показывает четыре цифры: дни, часы, минуты и секунды в формате XX:XX:XX:XX.
 Количество дней может состоять из более чем двух цифр.
-
+``` html
 <div class="timer" id="timer-1">
   <div class="field">
     <span class="value" data-value="days">11</span>
@@ -26,6 +26,9 @@
     <span class="label">Seconds</span>
   </div>
 </div>
+```
+
+```javascript
 
 Плагин это класс CountdownTimer, экземпляр которого создает новый таймер с настройками.
 
@@ -55,3 +58,5 @@ new CountdownTimer({ selector: '#timer-1', targetDate: new Date('Jul 17, 2019'),
 
 - Оставшиеся секунды: получаем оставшиеся секунды и делим их на количество
 - миллисекунд в одной секунде (1000) _/ const secs = Math.floor((time % (1000 _ 60)) / 1000);
+
+```
